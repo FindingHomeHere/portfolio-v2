@@ -73,19 +73,19 @@ const Footer = () => {
             <Text fontSize="sm" color="whiteAlpha.900">
               &copy; Isaac Johnson, LLC. 2021
             </Text>
+            <HStack>
+              <Link href="https://github.com/FindingHomeHere">
+                <IconButton
+                  colorScheme="purple"
+                  isRound
+                  size="sm"
+                  m={2}
+                  icon={<AiFillGithub />}
+                />
+              </Link>
+            </HStack>
           </Flex>
         </Flex>
-        {/* <HStack>
-          <Link href='https://github.com/FindingHomeHere'>
-            <IconButton
-              colorScheme='purple'
-              isRound
-              height={10}
-              width={10}
-              icon={<AiFillGithub />}
-            />
-          </Link>
-        </HStack> */}
       </Flex>
     </>
   );

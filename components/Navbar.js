@@ -8,11 +8,11 @@ import {
   Text,
   Link as LinkUi,
   IconButton,
-  Button,
 } from '@chakra-ui/react';
 import { useTrail, animated as Anim } from 'react-spring';
 import styled from '@emotion/styled';
 import { CloseIcon, ArrowForwardIcon } from '@chakra-ui/icons';
+import { AiFillGithub } from 'react-icons/ai';
 import ColorMode from './ColorMode';
 
 const navItems = [
@@ -43,6 +43,12 @@ const Navbar = () => {
     top: 16px;
     right: 16px;
     transform: rotate(${isOpen ? '0' : '-45deg'});
+  `;
+
+  const SocialButton = styled(IconButton)`
+    position: absolute;
+    top: 128px;
+    right: 16px;
   `;
 
   const NavFloat = styled(Flex)`
@@ -158,6 +164,13 @@ const Navbar = () => {
                 </Anim.div>
               ))}
               <ColorMode top={72} right={16} />
+              <Link href="https://github.com/FindingHomeHere">
+                <SocialButton
+                  colorScheme="purple"
+                  isRound
+                  icon={<AiFillGithub />}
+                />
+              </Link>
             </MenuContainer>
           </>
         )}
