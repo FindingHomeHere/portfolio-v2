@@ -1,12 +1,12 @@
 export default [
-  // {
-  //   id: 1,
-  //   title: "The Global Citizen",
-  //   description:
-  //     "The Global Citizen is a photographer living in Colorado Springs. His focus is on portraiture with a purpose. His projects are often times focused on shining a light on the day to day, and he wanted a website to showcase his work.",
-  //   link: "https://tgcstudio.com/",
-  //   image: "tgc",
-  // },
+  {
+    id: 1,
+    title: "Shuga's Restaurant | Bar",
+    description:
+      'Shuga\'s is the original Colorado Springs craft cocktail bar. It has been around for 20 years, serving an eclectic menu to the "most desireable place to live in the United States" since its beginning. This site features Amazon AWS S3 integration on Next Js, Emotion styled components, PDF.js, and many other incredible technologies.',
+    link: 'https://shugas.vercel.app',
+    image: 'shugas',
+  },
   {
     id: 2,
     title: 'Natours',

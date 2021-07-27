@@ -18,6 +18,7 @@ import { BsPencilSquare, BsCloudUpload, BsCone } from 'react-icons/bs';
 
 import Hero from '../../components/Hero';
 import Link from 'next/link';
+import SEO from '../../components/SEO';
 
 const ServiceItem = ({ title, icon, description, price = '' }) => {
   const { colorMode } = useColorMode();
@@ -63,6 +64,7 @@ const About = () => {
   const { colorMode } = useColorMode();
   return (
     <>
+      <SEO title='About | Isaac Johnson, LLC' />
       <Hero
         title="Industry Leading Technology"
         cta="Cutting through the noise with advanced technology, keeps your brand a step ahead."

@@ -4,15 +4,15 @@ import {
   Flex,
   Heading,
   useColorMode,
-  Spacer,
   Text,
-  Link as LinkUi,
   IconButton,
 } from '@chakra-ui/react';
 import { useTrail, animated as Anim } from 'react-spring';
 import styled from '@emotion/styled';
-import { CloseIcon, ArrowForwardIcon } from '@chakra-ui/icons';
+import { CloseIcon } from '@chakra-ui/icons';
 import { AiFillGithub } from 'react-icons/ai';
+import { withUserAgent } from 'next-useragent';
+
 import ColorMode from './ColorMode';
 
 const navItems = [
@@ -23,7 +23,7 @@ const navItems = [
 ];
 const config = { mass: 1, tension: 2500, friction: 250 };
 
-const Navbar = () => {
+const Navbar = (props) => {
   const { colorMode } = useColorMode();
   const [isOpen, setIsOpen] = useState(false);
   const trail = useTrail(navItems.length, {
@@ -33,6 +33,7 @@ const Navbar = () => {
     height: isOpen ? 80 : 0,
     from: { opacity: 0, x: 50, height: 0 },
   });
+  const { ua } = props;
 
   const handleMenuClick = () => {
     setIsOpen(!isOpen);
@@ -51,6 +52,17 @@ const Navbar = () => {
     right: 16px;
   `;
 
+  const FirefoxColor = () => {
+    if (ua) {
+      if (ua.browser === 'Firefox') {
+        return `${
+          ua.browser === 'Firefox' &&
+          `background-color: ${colorMode === 'dark' ? '#171923;' : '#EDF2F7'}`
+        }`;
+      }
+    }
+  };
+
   const NavFloat = styled(Flex)`
     position: fixed;
     top: 0;
@@ -62,8 +74,7 @@ const Navbar = () => {
     z-index: 100;
     box-sizing: border-box;
     ${isOpen && 'border-bottom: 1px solid #4299E1;'}
-    ${isOpen &&
-    `background-color: ${colorMode === 'dark' ? '#171923;' : '#EDF2F7'}`}
+    ${ua && FirefoxColor}
   `;
 
   const MenuContainer = styled(Flex)`
@@ -151,11 +162,6 @@ const Navbar = () => {
                         cursor: 'pointer',
                         transform: 'translateY(-10px)',
                         transition: 'all 0.45s ease',
-                        // _after: {
-                        //   content: `'  →'`,
-                        //   transition: 'opacity 0.45s ease',
-                        //   opacity: 1,
-                        // },
                       }}
                     >
                       {navItems[i].title}
@@ -180,4 +186,13 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export async function getStaticProps(ctx) {
+  console.log(`context: ${ctx}`);
+  return {
+    props: {
+      ua: ctx.ua,
+    },
+  };
+}
+
+export default withUserAgent(Navbar);

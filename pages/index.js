@@ -7,33 +7,34 @@ import {
   Icon,
   Text,
   useColorMode,
-} from "@chakra-ui/react";
-import Link from "next/link";
-import React from "react";
-import { ArrowForwardIcon } from "@chakra-ui/icons";
+} from '@chakra-ui/react';
+import Link from 'next/link';
+import React from 'react';
 
-import Hero from "../components/Hero";
-import HomepageWork from "../components/work/HomepageWork";
-import work from "../components/work/WorkData";
+import Hero from '../components/Hero';
+import SEO from '../components/SEO';
+import HomepageWork from '../components/work/HomepageWork';
+import work from '../components/work/WorkData';
 
 const Home = () => {
   const { colorMode } = useColorMode();
   return (
     <>
+      <SEO />
       <Hero
-        title="Design, Develop, Engage"
-        cta="Taking your brand to new levels through the use of cutting edge
+        title='Design, Develop, Engage'
+        cta='Taking your brand to new levels through the use of cutting edge
             technology, industry leading libraries, and a versatile knowledge
-            base."
-        ctaLink="/about"
-        btnText="Find out how it works!"
+            base.'
+        ctaLink='/about'
+        btnText='Find out how it works!'
       />
-      <Flex align="center" justify="center" marginTop="-1rem">
+      <Flex align='center' justify='center' marginTop='-1rem'>
         <HStack
-          marginTop="-3rem"
-          height={{ base: "420px", md: "260px" }}
-          overflowX="auto"
-          overflowY="hidden"
+          marginTop='-3rem'
+          height={{ base: '420px', md: '260px' }}
+          overflowX='auto'
+          overflowY='hidden'
           px={{ base: 0, md: 6 }}
           spacing={4}
         >
@@ -42,15 +43,15 @@ const Home = () => {
           })}
         </HStack>
       </Flex>
-      <Flex my={8} direction="column" align="center" justify="flex-start">
+      <Flex my={8} direction='column' align='center' justify='flex-start'>
         <Container my={8}>
           <Heading
             bgGradient={
-              colorMode === "dark"
-                ? "linear(to-r, purple.300, blue.500)"
-                : "linear(to-r, purple.600, blue.600)"
+              colorMode === 'dark'
+                ? 'linear(to-r, purple.300, blue.500)'
+                : 'linear(to-r, purple.600, blue.600)'
             }
-            bgClip="text"
+            bgClip='text'
           >
             Full Stack JavaScript
           </Heading>
@@ -74,8 +75,8 @@ const Home = () => {
             opportunity to take payments, build custom client databases, and
             track your business performance.
           </Text>
-          <Link href="/about">
-            <Button colorScheme="purple" my={4}>
+          <Link href='/about'>
+            <Button colorScheme='purple' my={4}>
               Find out more!
             </Button>
           </Link>
@@ -83,11 +84,11 @@ const Home = () => {
         <Container my={8}>
           <Heading
             bgGradient={
-              colorMode === "dark"
-                ? "linear(to-r, purple.300, blue.500)"
-                : "linear(to-r, purple.600, blue.600)"
+              colorMode === 'dark'
+                ? 'linear(to-r, purple.300, blue.500)'
+                : 'linear(to-r, purple.600, blue.600)'
             }
-            bgClip="text"
+            bgClip='text'
           >
             Native Mobile Apps
           </Heading>
@@ -105,8 +106,8 @@ const Home = () => {
             this means your business is just a tap away from so many people at
             any hour of the day.
           </Text>
-          <Link href="/about">
-            <Button colorScheme="purple" my={4}>
+          <Link href='/about'>
+            <Button colorScheme='purple' my={4}>
               Find out more!
             </Button>
           </Link>

@@ -3,10 +3,12 @@ import React from 'react';
 
 import Email from '../components/Email';
 import Hero from '../components/Hero';
+import SEO from '../components/SEO';
 
 const contact = () => {
   return (
     <>
+      <SEO title='Contact | Isaac Johnson, LLC' />
       <Hero
         title="Let's get started!"
         cta='Fill out the form below and we will see how we can best fit your needs!'
