@@ -46,6 +46,7 @@ const Home = () => {
       <Flex my={8} direction='column' align='center' justify='flex-start'>
         <Container my={8}>
           <Heading
+            display='inline-block'
             bgGradient={
               colorMode === 'dark'
                 ? 'linear(to-r, purple.300, blue.500)'
@@ -83,6 +84,7 @@ const Home = () => {
         </Container>
         <Container my={8}>
           <Heading
+          
             bgGradient={
               colorMode === 'dark'
                 ? 'linear(to-r, purple.300, blue.500)'

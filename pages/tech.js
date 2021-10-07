@@ -11,9 +11,9 @@ import {
 import React from 'react';
 import Hero from '../components/Hero';
 import Webflow from '../public/webflow.svg';
-import { FaReact, FaNodeJs } from 'react-icons/fa';
+import { FaReact, FaNodeJs, FaAws } from 'react-icons/fa';
 import { IoLogoFirebase } from 'react-icons/io5';
-import { DiMongodb } from 'react-icons/di';
+import { DiMongodb, DiSwift, DiSass } from 'react-icons/di';
 import SEO from '../components/SEO';
 
 const TechDescription = ({ icon, heading, text }) => {
@@ -65,7 +65,7 @@ const Technology = () => {
       <Flex align='center' justify='center'>
         <SimpleGrid
           spacing='36px'
-          columns={{ base: 1, '2xl': 2 }}
+          columns={{ base: 1, xl: 2 }}
           align='flex-start'
           justify='center'
           p={2}
@@ -85,6 +85,16 @@ const Technology = () => {
             text='Alongside React js, React Native is built for the mobile world. Using this highly advanced technology, we can build both native IOS and android apps. This platform allows flexibility, and control over the entire app build process. We test the apps on real devices, not simulated ones, so that you can be absolutely sure that your app will look right, and more importantly, be fully functional on nearly every screen.'
           />
           <TechDescription
+            icon={DiSwift}
+            heading='Swift'
+            text="Swift is the development language for Ios. It is fast, secure, and highly robust. It gives you the freedom to use Apple's extremely advanced tools like machine learning, maps, imaging services, and more."
+          />
+          <TechDescription
+            icon={FaAws}
+            heading='Amazon Web Services'
+            text="Amazon Web Services is the go-to source for online data storage, protection, and testing. It doesn't stop there, but if I were to list out every service they provide, I would need a whole new website. They are a highly andvanced, secure, and lightning fast web service used by many of the leading technology companies today. Think Moderna, Capital One, Netflix, The US Navy, and so many more. Contact me for more information about what AWS can provide for your business."
+          />
+          <TechDescription
             icon={IoLogoFirebase}
             heading='Firebase'
             text="Google's Firebase is an absolute necessity in modern day web and mobile apps. Not only does it provide you a way to securely log clients in to their accounts, it allows you to track their activity, and fully connects to Google Analytics so you can see what is working, and what isn't. This platform is easy to use, and with it being Google, can be accessed from anywhere. The best part is that it is fully scaleable!"
@@ -100,9 +110,9 @@ const Technology = () => {
             text='Node JS is beginning to gain traction, with each new update to the JS language, Node becomes more powerful, it is used to build the backend (login page, ecommerce, tracking, analytics, etc.) of webapps. This streamlined framework is fast, easy to use, and maintains the useability of a full scale web app.'
           />
           <TechDescription
-            icon={Webflow}
-            heading='Webflow'
-            text="Think of Webflow like Squarespace, Wix, or Wordpress, but built for developers. It is a tool that you can use to design layouts, color schemes, and other branding features, and then add your own scripts to make it work as you need it to. Wordpress can be slow and fragile, meaning there is so much downtime, and your site has to be repaired constantly. SquareSpace and Wix have very limited functionality, and struggle to keep up with your brand's growth. But with webflow, all you are doing is building a layout, and adding what you need later, which makes it the best tool for building static sites. It's even used by companies like Zendesk, Dell, and Upwork!"
+            icon={DiSass}
+            heading='Sass / Scss'
+            text='Sass is a styling framework for modern, scaleable web applications. It is designed to give you the flexibility to build a product that looks incredible while maintaining usability for nearly every browser. With how fast the computer world is advancing everyday, it is important to build your websites, and webapps with the intention for it to work for years ahead, but also years behind, and Sass gives you these tools from the start.'
           />
         </SimpleGrid>
       </Flex>

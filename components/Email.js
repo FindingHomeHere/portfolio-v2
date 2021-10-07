@@ -46,8 +46,9 @@ export default function ContactUs() {
 
   return (
     <Flex
-      marginTop='-48px'
       marginBottom='20px'
+      position='absolute'
+      top='-48px'
       maxW='400px'
       bgGradient={
         colorMode === 'dark'
@@ -67,12 +68,7 @@ export default function ContactUs() {
             and I will get back to you quickly!
           </Text>
         </Box>
-        <form
-          method='POST'
-          action='/success'
-          name='contact'
-          onSubmit={sendEmail}
-        >
+        <form method='POST' action='/' name='contact' onSubmit={sendEmail}>
           <input type='hidden' value='contact' />
           <FormControl py={2}>
             <FormLabel htmlFor='name'>
@@ -81,19 +77,19 @@ export default function ContactUs() {
             <Input type='text' name='name' maxLength='24' required />
           </FormControl>
           <FormControl py={2}>
-            <FormLabel HTMLfor='email'>
+            <FormLabel htmlFor='email'>
               <span>Email</span>
             </FormLabel>
             <Input type='email' name='email' maxLength='30' required />
           </FormControl>
           <FormControl py={2}>
-            <FormLabel HTMLfor='phone'>
+            <FormLabel htmlFor='phone'>
               <span>Phone</span>
             </FormLabel>
             <Input type='tel' name='phone' onChange={handleNumbers} required />
           </FormControl>
           <FormControl py={2}>
-            <FormLabel HTMLfor='message'>
+            <FormLabel htmlFor='message'>
               <span>Brief Message (50 characters or less)</span>
             </FormLabel>
             <Input type='textarea' name='message' maxLength='50' required />

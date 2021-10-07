@@ -13,7 +13,7 @@ const contact = () => {
         title="Let's get started!"
         cta='Fill out the form below and we will see how we can best fit your needs!'
       />
-      <Flex align='center' justify='center'>
+      <Flex align='center' position='relative' justify='center' minH='55vh'>
         <Email />
       </Flex>
     </>
