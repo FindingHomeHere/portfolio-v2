@@ -135,7 +135,7 @@ const About = () => {
           <Heading
             mb={8}
             mx={4}
-            width='200px'
+            display='inline-block'
             bgGradient={
               colorMode === 'dark'
                 ? 'linear(to-r, purple.300, blue.500)'
@@ -143,26 +143,23 @@ const About = () => {
             }
             bgClip='text'
           >
-            Pricing
+            Types of Service
           </Heading>
           <SimpleGrid spacing='16px' p={2} columns={1}>
             <ServiceItem
-              title='General JavaScript work'
+              title='General Software work'
               icon={DiJavascript1}
               description='This is the rate for any work done using JavaScript. This includes anything from large, enterprise web apps, to mobile apps.'
-              price='Starting at $80 /hr'
             />
             <ServiceItem
               title='Mobile App'
               icon={AiOutlineMobile}
               description='Building Mobile apps is much more complex than websites/webapps. With that complexity, you will also see so much more reward. The majority of people browse the internet on their mobile devices, and even more would prefer an app specifically designed for their device to a website, which is usually designed for all devices at the same time. Reach your audience in a more meaningful way with a new mobile app.'
-              price='Starting at $100 /hr'
             />
             <ServiceItem
               title='Static websites'
               icon={MdWeb}
               description='Static websites, like photography portfolios, landing pages, etc. generally take less time than a full web app, or mobile app. These simple sites can make a tremendous difference for the visibility of your brand.'
-              price='Starting at $2000'
             />
           </SimpleGrid>
           <Flex align='center' justify='flex-end' py={8} px={2}>
